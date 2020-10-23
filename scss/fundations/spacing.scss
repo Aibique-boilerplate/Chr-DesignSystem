@@ -1,0 +1,54 @@
+@import "../tokens/spacing.scss";
+
+//.space_size_direction_margin <<--
+
+@mixin constructor($num) {
+  padding: $num;
+  &_margin {
+    margin: $num;
+  }
+  &_top {
+    padding-top: $num;
+    &_margin {
+      margin-top: $num;
+    }
+  }
+  &_bottom {
+    padding-bottom: $num;
+    &_margin {
+      margin-bottom: $num;
+    }
+  }
+  &_left {
+    padding-left: $num;
+    &_margin {
+      margin-left: $num;
+    }
+  }
+  &_right {
+    padding-right: $num;
+    &_margin {
+      margin-right: $num;
+    }
+  }
+}
+
+.space {
+  @include constructor($space);
+}
+
+.space_2 {
+  @include constructor($space * 2);
+}
+
+.space_3 {
+  @include constructor($space * 3);
+}
+
+.space_4 {
+  @include constructor($space * 4);
+}
+
+.space_5 {
+  @include constructor($space * 5);
+}
